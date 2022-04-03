@@ -244,7 +244,7 @@ open class ScreenRecorderService : Service(), ShakeDetector.Listener {
         if (isAudioRecEnabled) {
             mMediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
             mMediaRecorder?.setAudioEncodingBitRate(320 * 1000)
-            mMediaRecorder?.setAudioSamplingRate(44100)
+            mMediaRecorder?.setAudioSamplingRate(48000)
         }
         // Get user preference for frame rate
         val videoFrameRate = mSharedPreferences.getString("frame_rate", "30")!!.toInt()
